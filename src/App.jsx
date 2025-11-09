@@ -1,20 +1,26 @@
-import { BrowserRouter } from 'react-router-dom'
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import CompetitiveEsports from './pages/CompetitiveEsports'
-import CreatorsPartners from './pages/CreatorsPartners'
-import TechAntiCheat from './pages/TechAntiCheat'
-import MediaCoverage from './pages/MediaCoverage'
-import JoinUs from './pages/JoinUs'
-import NotFound from './Contact/application form/NotFound'
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import CompetitiveEsports from './pages/CompetitiveEsports';
+import CreatorsPartners from './pages/CreatorsPartners';
+import TechAntiCheat from './pages/TechAntiCheat';
+import MediaCoverage from './pages/MediaCoverage';
+import JoinUs from './pages/JoinUs';
+import NotFound from './Contact/application form/NotFound';
+
+import GlobalHyperspeedBackground from './components/GlobalHyperspeedBackground';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
+      <div className="relative flex flex-col min-h-screen">
+        {/* GLOBAL HYPERSPEED BG */}
+        <GlobalHyperspeedBackground />
+
+        {/* FOREGROUND CONTENT */}
         <Navbar />
         <main className="flex-1">
           <Routes>
@@ -31,7 +37,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
